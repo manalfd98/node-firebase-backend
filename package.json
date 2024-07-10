@@ -2,11 +2,12 @@
   "name": "fullstackapp",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node src/index.js",
-    "start": "node dist/src/index.js"
+    "start": "node dist/src/index.js",
+    "build": "babel src --out-dir dist/src"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/cli": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
   }
 }
+
