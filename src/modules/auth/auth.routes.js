@@ -1,9 +1,10 @@
 import { Router } from 'express'
-import { signUp,login } from './auth.controller.js'
+import authController from './auth.controller.js'
+import { authenticateToken } from '../../middleware/auth.middleware.js'
 
-const routes = Router()
+const authRoutes = Router()
+authRoutes.post('/createUser', authController.createUserWithToken)
+authRoutes.post('/signinWithToken', authController.signinWithCustomToken)
 
-routes.get('/sign-up', signUp)
-routes.get('/login', login)
 
-export default { routes }
+export default authRoutes

@@ -1,12 +1,13 @@
-import { Router } from "express";
-import authRoutes from "../modules/auth/auth.routes.js";
+import { Router } from 'express'
+import authRoutes from '../modules/auth/auth.routes.js'
+import uploadRoutes from '../modules/media/upload.routes.js'
+import userRoutes from '../modules/user/user.route.js'
 
-const route = Router();
+const route = Router()
 
-export default function InitializeRoutes() {
-  route.use("/auth", authRoutes.routes);
-//   route.use("/user", userRoutes);
-//   route.use("/media", mediaRoutes);
-  
-  return route; // Add this line to return the Router instance
+export default function InitializeRoutes () {
+  route.use('/auth', authRoutes)
+  route.use("/user", userRoutes);
+  route.use('/media', uploadRoutes)
+  return route
 }
