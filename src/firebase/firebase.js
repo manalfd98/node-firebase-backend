@@ -1,7 +1,7 @@
 import admin from 'firebase-admin';
-import * as dotenv from 'dotenv'; // Import dotenv if you're using it for managing environment variables
+import * as dotenv from 'dotenv'; 
 
-dotenv.config(); // Load environment variables from a .env file if used
+
 
 async function initializeFirebaseAdmin() {
   const serviceAccount = {
