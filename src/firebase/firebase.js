@@ -1,7 +1,7 @@
 import admin from 'firebase-admin';
 
 async function initializeFirebaseAdmin() {
-  const serviceAccount = await import('../config/fullstackapp-e3122-firebase-adminsdk-fweqi-949270d537.json', {
+  const serviceAccount = await import('../config/config.json', {
     assert: { type: 'json' }
   });
 
